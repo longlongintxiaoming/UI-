@@ -1,0 +1,86 @@
+.pieces-slider {
+	position: relative;
+	text-align: center;
+	padding: 8rem 0;
+}
+
+.js .pieces-slider {
+	padding: 0;
+}
+
+.js .pieces-slider__slide {
+	position: absolute;
+	right: 100%;
+}
+
+.pieces-slider__image {
+	max-width: 1000px;
+	max-height: 750px;
+}
+
+.js .pieces-slider__image {
+	visibility: hidden;
+}
+
+.js .pieces-slider__text {
+	text-indent: -9999px;
+}
+
+.js .pieces-slider__canvas {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	transition: 0.2s opacity;
+}
+
+.pieces-slider__canvas--hidden {
+	opacity: 0;
+	transition-duration: 0.3s;
+}
+
+.pieces-slider__button {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100px;
+	height: 100px;
+	margin: -25px 0 0 0;
+	background-color: #102fbf;
+	color: #fff;
+	font-family: inherit;
+	font-weight: bold;
+	font-size: 36px;
+	border: none;
+	cursor: pointer;
+	transition: 0.1s background-color;
+}
+
+.pieces-slider__button:hover {
+	background: #102fbf;
+}
+
+.pieces-slider__button--next {
+	left: auto;
+	right: 0;
+}
+
+.no-js .pieces-slider__button {
+	display: none;
+}
+
+@media screen and (max-width: 720px) {
+	.pieces-slider__image {
+		max-width: 300px;
+	}
+}
+
+@media screen and (max-width: 55em) {
+	.pieces-slider__canvas {
+		width: 100vw;
+		height: 100vw;
+	}
+	.pieces-slider__button {
+		width: 60px;
+		height: 60px;
+	}
+}
